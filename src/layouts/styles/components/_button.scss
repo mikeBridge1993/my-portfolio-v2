@@ -1,0 +1,66 @@
+.button {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 1px;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+    font-family: $default-text-font;
+  }
+
+  &:hover {
+    transform: translateY(0px);
+    box-shadow: 0 1rem 2rem rgba(black,.2);
+    border-radius: 3px;
+    
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &__link, &__link:hover  {
+    text-decoration: none;
+    color: white;    
+  }
+
+  &:active, &:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(black,.2);
+    outline: none;
+  }
+
+  &--primary {
+    background-color: lighten($secondary-color, 10%);
+    color: white;
+    animation: moveInBottom 1s ease-out;
+
+    &::after {
+      background-color:  $secondary-color;
+    }
+  }
+
+  &--gold {
+    background-color: #C49B66;
+    color: white;
+    text-transform: none;
+    padding: .5rem 1rem;
+    font-size: 1.4rem;
+    
+    &::after {
+      background-color:  #C49B66;
+    }
+    
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}

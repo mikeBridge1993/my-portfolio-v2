@@ -1,0 +1,55 @@
+
+.skills {
+  &__gallery {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__box {
+    height: auto;
+    line-height: 0;
+    display: inline-block;
+
+    @for $i from 0 through 6 {
+      $delay: .8s+$i * 0.4s;
+      &:nth-child(#{$i}) {
+       i {
+         animation: opacity 1.5s $delay forwards;
+       }
+      }
+    }
+
+    &__icon {
+      display: inline-block;
+      font-size: 4rem;
+      transition: all .6s;
+      // text-shadow: 1px 1px  darkblue;
+      .icon-bootstrap {
+        font-size: 4rem;
+        line-height: 1.3;
+      }
+
+      i {
+        opacity: 0;
+      }
+    }
+    
+    &__icon:hover {
+      transform: rotateX(20deg) rotateZ(10deg);  
+      transform-origin: center;
+     }
+
+    &--frontend {
+      color: black;
+    }
+
+    &--backend {
+      color: white;
+    }
+  }
+}
