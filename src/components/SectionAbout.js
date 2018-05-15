@@ -29,16 +29,13 @@ const SectionAbout = () => (
         
       </div>
       <div className="about-box__border">
-        
       </div>
       <div className="about-box__information">
         <div className="gallery gallery--about">
         {cardsInfo.map((el, i) => (
           <div className="gallery__card">
-            <div className="gallery__box">
-              <h3 className="gallery__box__header">{el.title}   </h3>
-              <p className="gallery__box__text">{el.text}</p>
-            </div>
+            <h3 className="gallery__card__header">{el.title}</h3>
+            <p className="gallery__card__text">{el.text}</p>
         </div>))}
     </div>
       </div>

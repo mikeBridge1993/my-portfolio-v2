@@ -7,7 +7,7 @@
   flex-direction: column;
   max-width: 80%;
   
-  &__box {
+  &__card {
     background-size: cover;
     font-size: 1.6rem;
     font-weight: 500;
@@ -51,15 +51,7 @@
   }
 
   &--projects {
-    max-width: 70%;
-    &--frontend {
-      color: black;
-      text-align: center;
-    }
-
-    &--backend {
-      color: white;
-      text-align: center;
-    }
+    min-height: 17rem;
+    text-align: center;
   }
 }

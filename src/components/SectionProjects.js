@@ -58,77 +58,41 @@ const projects = [
 const SectionProjects = () => (
   <section className="section-projects" id="section-projects__card">
     <div className="projects-box">
-      <div className="projects-box__section" />
-      <div className="projects-box__border" />
-      <div className="projects-box__text">
-        <div className="projects-box__frontend-text">
-          <div className="gallery gallery--projects gallery--projects--frontend">
-            <div className="gallery__card">
-              <div className="gallery__box">
-                <h3 className="gallery__box__header">{frontEndInfo.title}   </h3>
-                <p className="gallery__box__text">{frontEndInfo.text}</p>
-                <div className="projects-box__skills mt-5">
-                  {frontEndIcons.map((el, i) => {
-                    return <div className="skills__box skills__box--frontend">
-                            <div className="skills__box__icon">
-                            <i className={el[0]}></i>
-                            </div>
-                          </div>
-                  })}
-                </div>
-                {/**<button className="button button--gold"><a href={frontEndInfo.buttonLink}>{frontEndInfo.buttonText}</a></button>**/}
-              </div>
-            </div>
+      <div className="projects-box__frontend text-dark">
+        <div className="gallery gallery--projects">
+          <div className="gallery__card">
+            <h3 className="gallery__card__header">{frontEndInfo.title}   </h3>
+            <p className="gallery__card__text">{frontEndInfo.text}</p>
+            
+            {/**<button className="button button--gold"><a href={frontEndInfo.buttonLink}>{frontEndInfo.buttonText}</a></button>**/}
           </div>
         </div>
-        <div className="projects-box__backend-text">
-          <div className="gallery gallery--projects gallery--projects--backend">
-            <div className="gallery__card">
-              <div className="gallery__box">
-                <h3 className="gallery__box__header">{backEndInfo.title}</h3>
-                <p className="gallery__box__text">{backEndInfo.text}</p>
-                <div className="projects-box__skills">
-                {backEndIcons.map((el, i) => {
-                  return <div className="skills__box skills__box--backend mt-5">
-                          <div className="skills__box__icon mt-5">
-                          <i className={el[0]}></i>
-                          </div>
-                        </div>
-                  })}
-                </div>
-                <button className="button button--gold"><a href={backEndInfo.buttonLink}>{backEndInfo.buttonText}</a></button>
-              </div>
-            </div>
-           
+        <div className="projects-box__skills">
+          {frontEndIcons.map((el, i) => {
+            return (
+              <div className="skill__card">
+                <i className={el[0]} />
+              </div>);
+          })}
+        </div>
+      </div>
+      <div className="projects-box__backend">
+        <div className="gallery gallery--projects">
+          <div className="gallery__card">
+            <h3 className="gallery__card__header">{backEndInfo.title}</h3>
+            <p className="gallery__card__text">{backEndInfo.text}</p>
+             {/**
+            <button className="button button--gold"><a href={backEndInfo.buttonLink}>{backEndInfo.buttonText}</a></button>**/}
           </div>
         </div>
-        
-      </div>
-      <div className="projects-box__reel">
-        {projects.map((el) => {
+        <div className="projects-box__skills">
+          {backEndIcons.map((el, i) => {
             return (
-              <div className="projects-box__reel__project">
-                <a href={el.link} className="projects-box__reel__link">
-                  <img className="projects-box__reel__image" src={el.thumbnail} alt=""/>
-                </a>
-              </div>
-            );
-        })}
-      </div>
-      <div className="projects-box__reel-back">
-        {frontEndIcons.map((el) => {
-            return (
-              <div className="projects-box__reel__project">
-             
-                <div className="skills__box skills__box--backend mt-5">
-                        <div className="skills__box__icon mt-5">
-                        <i className={el[0]}></i>
-                        </div>
-                      </div>
-             
-              </div>
-            );
-        })}
+              <div className="skill__card">
+                <i className={el[0]} />
+              </div>);
+            })}
+        </div>
       </div>
     </div>
   </section>
@@ -136,6 +100,33 @@ const SectionProjects = () => (
 
 
 export default SectionProjects;
+
+// <div className="projects-box__reel">
+//         {projects.map((el) => {
+//       //       return (
+//       //         <div className="projects-box__reel__project">
+//       //           <a href={el.link} className="projects-box__reel__link">
+//       //             <img className="projects-box__reel__image" src={el.thumbnail} alt=""/>
+//       //           </a>
+//       //         </div>
+//       //       );
+//       //   })}
+//       // </div>
+//       // <div className="projects-box__reel-back">
+//       //   {frontEndIcons.map((el) => {
+//       //       return (
+//       //         <div className="projects-box__reel__project">
+             
+//       //           <div className="skills__box skills__box--backend mt-5">
+//       //                   <div className="skills__box__icon mt-5">
+//       //                   <i className={el[0]}></i>
+//       //                   </div>
+//       //                 </div>
+             
+//       //         </div>
+//       //       );
+//       //   })}
+//       // </div>
 
 // const SectionProjects = () => (
 //   <section className="section-about" id="section-about">
