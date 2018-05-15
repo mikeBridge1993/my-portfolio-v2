@@ -1,7 +1,7 @@
 
 .skill {
   &__card {
-    flex: 1 0 auto;
+    flex-basis: 20%;
     height: 10rem;
     line-height: 0;
     position: relative;
@@ -9,8 +9,8 @@
     align-items: center;
     justify-content: center;
 
-    @for $i from 0 through 6 {
-      $delay: .8s+$i * 0.4s;
+    @for $i from 0 through 8 {
+      $delay: .5s+$i * 0.3s;
       
       &:nth-child(#{$i}) {
        i {
@@ -37,7 +37,7 @@
     }
 
     i {
-      font-size: 4rem;
+      font-size: 3.8rem;
       transition: all .6s;
       opacity: 0;
     }

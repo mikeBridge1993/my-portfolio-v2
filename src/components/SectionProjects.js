@@ -3,9 +3,9 @@ import frontEndProject1 from '../img/projects/natours-project.png';
 import frontEndProject2 from '../img/projects/miguelbettencourt-project.png';
 import backEndProject1 from '../img/projects/xpensify-project.png';
 
-const frontEndIcons = [['fab fa-html5', '#F16524'], ['fab fa-css3-alt', '#27A3E1'], ['fab fa-js', '#FDDE35'], ['fab fa-react', '#61DAFB'], [ 'fab fa-sass', '#CF649A'],['icon-bootstrap',  '#644193']];
+const frontEndIcons = [['fab fa-html5', '#F16524'], ['fab fa-css3-alt', '#27A3E1'], ['fab fa-js', '#FDDE35'], ['fab fa-react', '#61DAFB'], [ 'fab fa-sass', '#CF649A']];
 
-const backEndIcons = [['fab fa-node', '#90C53F'], ['icon-mongodb', 'green']];
+const backEndIcons = [['fab fa-node', '#90C53F'], ['icon-mongodb', 'green'], ['icon-mongodb', 'green']];
 
 const frontEndInfo = {
   title: 'Front End Development',        
@@ -61,8 +61,8 @@ const SectionProjects = () => (
       <div className="projects-box__frontend text-dark">
         <div className="gallery gallery--projects">
           <div className="gallery__card">
-            <h3 className="gallery__card__header">{frontEndInfo.title}   </h3>
-            <p className="gallery__card__text">{frontEndInfo.text}</p>
+            <h3 className="gallery__card__header">{frontEndInfo.title}</h3>
+            <p className="gallery__card__text text-left">{frontEndInfo.text}</p>
             
             {/**<button className="button button--gold"><a href={frontEndInfo.buttonLink}>{frontEndInfo.buttonText}</a></button>**/}
           </div>
@@ -73,6 +73,17 @@ const SectionProjects = () => (
               <div className="skill__card">
                 <i className={el[0]} />
               </div>);
+          })}
+        </div>
+        <div className="projects-box__reel">
+          {projects.map((el) => {
+              return (
+                <div className="projects-box__reel__project">
+                  <a href={el.link} className="projects-box__reel__link">
+                    <img className="projects-box__reel__image" src={el.thumbnail} alt=""/>
+                  </a>
+                </div>
+              );
           })}
         </div>
       </div>
@@ -92,6 +103,17 @@ const SectionProjects = () => (
                 <i className={el[0]} />
               </div>);
             })}
+        </div>
+        <div className="projects-box__reel">
+          {projects.map((el) => {
+              return (
+                <div className="projects-box__reel__project">
+                  <a href={el.link} className="projects-box__reel__link">
+                    <img className="projects-box__reel__image" src={el.thumbnail} alt=""/>
+                  </a>
+                </div>
+              );
+          })}
         </div>
       </div>
     </div>

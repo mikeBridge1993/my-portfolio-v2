@@ -51,7 +51,9 @@
   }
 
   &--projects {
-    min-height: 17rem;
+    p {
+      min-height: 12rem;
+    }
     text-align: center;
   }
 }

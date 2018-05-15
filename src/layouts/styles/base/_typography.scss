@@ -28,3 +28,16 @@
   animation: moveInBottom 1s ease-out;
   font-weight: 400;
 }
+
+.header-tertiary {
+  font-size: 3rem;
+  font-family: $default-text-font;
+  font-weight:600;
+  text-align: center;
+  color: black;
+
+  &--white {
+    color:white;
+  }
+  // animation: moveInLeft 1s ease-out;
+}
