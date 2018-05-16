@@ -34,10 +34,15 @@
         color: white;
         border: 1px solid transparent;
         transition: all .6s;
+        // background-image: linear-gradient(120deg, transparent,transparent 50%, lighten($header-color, 20%) 0);
+        // background-size: 250%;
+        // -webkit-transition: all .4s;
+        // backface-visibility: hidden;
 
         &:hover {
           background-color: lighten($header-color, 20%);
           border-bottom: 1px solid #C49B66;
+          // background-position: 100%;
         }
       }
     }

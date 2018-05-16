@@ -26,10 +26,13 @@
   &__frontend {
     background-color:#E0DEDF;
     border-right: 1px solid #C49B66;
+    color: black;
   }
 
   &__backend {
-    background-color: #CCCCCC;
+    background-color: rgb(139, 139, 139);
+    // background-color:#E0DEDF;
+    // color: black;
   }
 
   &__skills {
@@ -39,7 +42,6 @@
     margin: 0;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin-top: auto;
   }
 
   &__reel {
@@ -51,54 +53,84 @@
     height: 25rem;
 
     @for $i from 0 through 4 {
-      $delay: 1.8s+$i * 0.4s;
+      $delay: 2.5s+$i * 0.4s;
       
       &__project:nth-child(#{$i}) {
          animation: opacity 1.5s $delay forwards;
       }
     }
-    
-    &__project:hover {
-      flex: 1 0 70%;
-    }
-
+  
     &__project {
-      line-height: 0;
-      display: flex;
-      flex: 1 1 25%;
-      background-color:transparent;
-      transition: all .7s;
-      opacity: 0;
-    }
-    
-    // &__project:hover + &__project {
-    //   flex-basis: 0%;
-    //   & {
-    //     flex-basis: 100%;
-    //   }
-    // }
-
-    &__link {
       height: 100%;
       width: 100%;
-      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
       perspective: 1000px;
-
-      &:hover img {
-        transform: scale(1.2);
-        filter: grayscale(100%) opacity(100%);
-      }
+      line-height: 0;
+      flex: 1 1 25%;
+      transition: all .7s ease-out;
+      opacity: 0;
+      overflow: hidden;
 
       img {
         max-width:100%;
         min-height: 100%;
-        filter: grayscale(100%) opacity(30%);
+        filter: grayscale(100%) opacity(25%);
         transition: all .5s ease-in;
 
       }
     }
+
+    &__project:hover img {
+      transform: scale(1.2);
+      filter: grayscale(100%) opacity(25%)  contrast(150%);
+    }
+
+    &__project:hover &__links-box {
+      opacity: 1;
+    }
+
+    &__links-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 15%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      opacity: 0;
+      transition: all .7s;
+      transform: translate(-50%, -50%);
+
+      i {
+        backface-visibility: hidden;
+        font-size: 2.5rem;
+        color: black;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+   
+  }
+
+  &__header {
+    width: 100%;
+    text-align: center;
+    font-family: $default-text-font;
+    font-size: 1.5rem;
+    background-color: rgba(212, 202, 202, 0.4);
+    background-color: rgba(212, 202, 202, 0.4);
+    color: black;
+    font-weight: 500;
+    opacity: 0;
+    animation: opacity 1s .8s forwards;    
+  }
+
+  &__skills + &__header {
+    animation: opacity 1s 2.5s forwards;    
   }
 }

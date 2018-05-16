@@ -1,7 +1,7 @@
 
 .skill {
   &__card {
-    flex-basis: 20%;
+    flex-basis: calc(16.666666667%);
     height: 10rem;
     line-height: 0;
     position: relative;
@@ -37,7 +37,7 @@
     }
 
     i {
-      font-size: 3.8rem;
+      font-size: 4.5rem;
       transition: all .6s;
       opacity: 0;
     }
