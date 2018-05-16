@@ -38,7 +38,9 @@ const SectionAbout = () => (
             <p className="gallery__card__text">{el.text}</p>
         </div>))}
     </div>
+    
       </div>
+      
     </div>
   </section>
 );

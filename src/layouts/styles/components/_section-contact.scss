@@ -1,9 +1,12 @@
 .section-contact {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - #{$header-height});
   width: 100%;
   padding: $header-height 0;
   color: white;
 }
 
-
+.contact-box {
+  padding: 8rem 0 0 0;
+  color: black;
+}

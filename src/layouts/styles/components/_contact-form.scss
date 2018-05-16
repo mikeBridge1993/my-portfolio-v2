@@ -1,8 +1,13 @@
 .contact-form {
-  width: 40%;
+  width: 55%;
   margin: 0 auto;
   font-family: $default-text-font;
   animation: moveInBottom 1s ease-out;
+  
+  &__header {
+    font-size: 2.0rem;
+    font-weight: 500;
+  }
 
   &__info {
     display: flex;
@@ -20,19 +25,22 @@
   }
 
   &__group:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: .5rem;
   }
 
   &__input {
     width: 100%;
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     font-family: inherit;
     color: inherit;
     padding: .7rem 1.5rem;
     border-radius: 1px;
     border: none;
+    // background-color: rgba(#C49B66, .5);
     background-color: lightgrey;
-    border-bottom: 3px solid transparent;
+    background-color: rgba(#C49B66, .2);
+    background-color: rgba(#A8A4A4, .2);
+    border: 1px solid black;
     display: block;
     transition: all .2s;
     margin: 0 auto;
@@ -41,18 +49,20 @@
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba(black, 0.2);
-      border-bottom: 3px solid rgb(23, 161, 23);
+      // border-bottom: 1px solid rgb(23, 161, 23);
+      background-color: rgba(23, 161, 23, .3);
 
       &:invalid {
-        border-bottom: 3px solid rgb(245, 161, 6);
+        // border-bottom: 1px solid rgb(245, 161, 6);
+        background-color: rgba(#C49B66, .5);
       }
     }
   }
 
   &__label {
-    font-size: 2rem;
-    font-weight: 400;
-    color: darken(white, 20%);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #C49B66;
     margin-top: 0.4rem;
     transition: all .3s;
   }

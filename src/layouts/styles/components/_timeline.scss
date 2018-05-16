@@ -1,11 +1,19 @@
-
 .timeline {
   position: relative;
   margin: 0 auto;
   width: 63%;
   font-family: $default-text-font;
-  animation: moveInBottom 1s ease-out;
-  
+  // animation: moveInBottom 1s ease-out;
+  opacity: 0;
+
+  @for $i from 0 through 5 {
+    $delay: 1s+(4-$i)* 0.4s;
+    
+    &:nth-child(#{$i}) {
+        animation: opacity 1s $delay forwards;
+    }
+  }
+
   h3 {
     font-weight: 600;
   }
@@ -14,7 +22,7 @@
     content: '';
     position: absolute;
     width: 2px;
-    background-color: lighten($secondary-color, 30%);
+    background-color: lighten(#C49B66, 0%);
     top: 10px;
     bottom: -10px;
     left: 50%;
@@ -24,14 +32,14 @@
   &::before {
     content: '';
     position: absolute;
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
     top: 10px;
     bottom: 0;
     left: 50%;    
     transform: translateX(-50%);
-    background-color: lighten($secondary-color, 50%);
-    border: 5px solid  lighten($secondary-color, 20%);
+    background-color: lightgrey;
+    border: 2px solid  #C49B66;
     border-radius: 50%;
     border-radius: 50%;
     z-index: 2;
@@ -55,7 +63,7 @@
         content: " ";
         height: 0;
         position: absolute;
-        top: 12.5px;
+        top: 7.5px;
         width: 0;
         z-index: 1;
         border: medium solid $resume-content-color;
@@ -79,18 +87,28 @@
     background-color: $resume-content-color;
     position: relative;
     border-radius: 2px;
-    box-shadow: 0rem 1.5rem 4rem rgba(black, 0.2);
+    color: #C49B66;
+    
+    p {
+      color: black;
+      font-weight: 500;
+    }
+    // box-shadow: 0rem 1.5rem 4rem rgba(black, 0.2);
   }
 
   &:hover &__content {
-    background-color:  lighten($resume-content-color, 20%);
+    background-color:  lighten($resume-content-color, 5%);
   }
 
   &:hover &__container--left::before {
-    border-color: transparent transparent transparent lighten($resume-content-color, 20%);
+    border-color: transparent transparent transparent lighten($resume-content-color, 5%);
   }
 
   &:hover &__container--right::before {
-    border-color: transparent lighten($resume-content-color, 20%) transparent transparent;
+    border-color: transparent lighten($resume-content-color, 5%) transparent transparent;
   }
+
+  // &:hover::before {
+  //   background-color: lighten($resume-content-color, 5%);
+  // }
 }

@@ -4,7 +4,7 @@
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 1rem 2rem;
+    padding: .5rem 1rem;
     display: inline-block;
     border-radius: 1px;
     transition: all .2s;
@@ -13,11 +13,13 @@
     border: none;
     cursor: pointer;
     font-family: $default-text-font;
+    color: black;
   }
 
   &:hover {
     transform: translateY(0px);
-    box-shadow: 0 1rem 2rem rgba(black,.2);
+    box-shadow: 0 .5rem .8rem rgba(black,.1);
+    // box-shadow: 0 1rem 2rem rgba(black,.2);
     border-radius: 3px;
     
     &::after {
@@ -33,34 +35,38 @@
 
   &:active, &:focus {
     transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba(black,.2);
+    box-shadow: 0 .5rem .5rem rgba(black,.1);
     outline: none;
   }
 
   &--primary {
-    background-color: lighten($secondary-color, 10%);
-    color: white;
     animation: moveInBottom 1s ease-out;
-
+    color: black;
+    background-color: #DBD6D7;
     &::after {
       background-color:  $secondary-color;
     }
+
+    a, a:hover {
+        text-decoration: none;
+        color: black;
+    }
   }
 
-  &--gold {
-    background-color: #C49B66;
-    color: white;
-    text-transform: none;
-    padding: .5rem 1rem;
-    font-size: 1.4rem;
+  // &--gold {
+  //   background-color: #C49B66;
+  //   color: white;
+  //   text-transform: none;
+  //   padding: .5rem 1rem;
+  //   font-size: 1.4rem;
     
-    &::after {
-      background-color:  #C49B66;
-    }
+  //   &::after {
+  //     background-color:  #C49B66;
+  //   }
     
-    a {
-      text-decoration: none;
-      color: white;
-    }
-  }
+  //   a {
+  //     text-decoration: none;
+  //     color: white;
+  //   }
+  // }
 }
