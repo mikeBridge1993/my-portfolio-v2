@@ -1,12 +1,18 @@
 .section-contact {
   position: relative;
-  height: calc(100vh - #{$header-height});
+  height: auto;
   width: 100%;
   padding: $header-height 0;
   color: white;
+  
 }
+
 
 .contact-box {
   padding: 8rem 0 0 0;
   color: black;
+
+  @media(max-width: $mobile-breakpoint) {
+    padding: 2rem 0 0 0;
+  }
 }

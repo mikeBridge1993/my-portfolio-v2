@@ -3,17 +3,20 @@ import Link from 'gatsby-link';
 
 const activeStyle = {
   backgroundColor: '#595252',
-  borderBottom: '1px solid #C49B66',
+  borderBottom: '2px solid #C49B66',
   color: 'white',
 }
 
 const Header = () => (
   <header>
-    <nav className="navbar navbar-expand-lg navbar-dark">
-      <a className="navbar-brand" href="#">MP<span></span></a>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon" />
-      </button>
+    <nav className="navbar navbar-expand-md navbar-dark">
+      <div className="nav-header">
+        <a className="navbar-brand" href="#">M<span>P</span></a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <input type="checkbox" className="checkbox"  id="navi-toggle" />
+          <label htmlFor="navi-toggle" className="checkbox__button"><span className="checkbox__icon">&nbsp;</span></label>
+        </button>
+      </div>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">

@@ -1,8 +1,13 @@
 .section-resume {
   position: relative;
-  height: calc(100vh - #{$header-height});
+  height: $section-height;
   width: 100%;
   padding: $header-height 0;  
-  background-color: rgba(#FFFFFF, 1);
+  background-color: #6E6E6E;
+
+  @media(max-width: $tablet-breakpoint) {
+    min-height: calc(#{$section-height} - 1rem);
+    height: auto;
+  }
 }
 

@@ -1,12 +1,16 @@
 .contact-form {
-  width: 55%;
+  width: 60%;
   margin: 0 auto;
   font-family: $default-text-font;
   animation: moveInBottom 1s ease-out;
   
+  @media(max-width: $mobile-breakpoint) {
+    width: 85%;
+  }
+
   &__header {
-    font-size: 2.0rem;
-    font-weight: 500;
+    font-size: 1.6rem;
+    font-weight: 600;
   }
 
   &__info {
@@ -20,7 +24,7 @@
 
   &__text {
     textarea {
-      height: 25rem;
+      height: 13rem;
     }
   }
 
@@ -30,10 +34,10 @@
 
   &__input {
     width: 100%;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-family: inherit;
     color: inherit;
-    padding: .7rem 1.5rem;
+    padding: .3rem 1.2rem;
     border-radius: 1px;
     border: none;
     // background-color: rgba(#C49B66, .5);
@@ -60,7 +64,7 @@
   }
 
   &__label {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #C49B66;
     margin-top: 0.4rem;

@@ -9,6 +9,10 @@
     align-items: center;
     justify-content: center;
 
+    @media(max-width: $mobile-breakpoint) {
+      flex-basis:33.333%;
+    }
+
     @for $i from 0 through 8 {
       $delay: .5s+$i * 0.3s;
       

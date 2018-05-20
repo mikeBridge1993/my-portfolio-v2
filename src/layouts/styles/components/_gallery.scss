@@ -24,6 +24,13 @@
       text-align: center;
     }
 
+    &__subHeader {
+      color: #C49B66;
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-align: left;
+    }
+
     // &:hover{
     //   transform: scale(1.05) translateY(-.5rem);
     // }
@@ -37,23 +44,55 @@
   &__card:nth-child(2) {
     margin: 2rem 0rem;
     visibility: hidden;
-    animation: moveInBottom 1s .5s ease-out forwards;
+    // animation: moveInBottom 1s .5s ease-out forwards;
+    animation: moveInLeft 1s 2s ease-out forwards;
   }
 
   &__card:nth-child(3) {
     visibility: hidden;
-    animation: moveInBottom 1s 1s ease-out forwards;
+    // animation: moveInBottom 1s 1s ease-out forwards;
+    animation: moveInRight 1s 3.5s ease-out forwards;
+    
   }
 
   &--about {
     color: black; 
     text-align: left;
+    
+    p {
+      font-size: 1.7rem;
+      font-weight: 500;
+      letter-spacing: 0px;
+    }
+
+
+
+    @media(max-width: $mobile-breakpoint) {
+      p {
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: 0px;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+      }
+    }
   }
 
   &--projects {
     p {
       min-height: 12rem;
     }
+
     text-align: center;
+
+    @media(max-width: $mobile-breakpoint) {
+      padding: 9rem 0 9rem 0;
+
+      p {
+        min-height: 0;
+      }
+    }
   }
 }

@@ -1,10 +1,19 @@
 .timeline {
   position: relative;
-  margin: 0 auto;
-  width: 63%;
+  margin: 1rem auto;
+  width: 70%;
   font-family: $default-text-font;
   // animation: moveInBottom 1s ease-out;
   opacity: 0;
+
+  @media(max-width: $tablet-breakpoint) {
+    width: 100%;
+  }
+
+  @media(max-width: $mobile-breakpoint) {
+    width: 84%;
+    font-size: 1.5rem;
+  }
 
   @for $i from 0 through 5 {
     $delay: 1s+(4-$i)* 0.4s;
@@ -22,11 +31,15 @@
     content: '';
     position: absolute;
     width: 2px;
+    height: 100%;
     background-color: lighten(#C49B66, 0%);
-    top: 10px;
-    bottom: -10px;
+    top: calc(10px + 1rem);    
     left: 50%;
     transform: translateX(-50%);
+
+    @media(max-width: $mobile-breakpoint) {
+      left: 100%; 
+    }
   } 
 
   &::before {
@@ -43,6 +56,10 @@
     border-radius: 50%;
     border-radius: 50%;
     z-index: 2;
+
+    @media(max-width: $mobile-breakpoint) {
+      left: 100%; 
+    }
   } 
 
   &__container {
@@ -51,12 +68,21 @@
       background-color: inherit;
       width: 50%;
 
+      @media(max-width: $mobile-breakpoint) {
+        width: 100%;
+        padding: 0 10% 0 0%;
+      }
+
       &--left {
         left: 0;
       }
 
       &--right {
         left: 50%;
+
+        @media(max-width: $mobile-breakpoint) {
+          left: 0%;
+        }
       }
 
       &--left::before, &--right::before {
@@ -73,12 +99,24 @@
         right: 30px;      
         border-width: 10px 0 10px 10px;
         border-color: transparent transparent transparent $resume-content-color;
+
+        @media(max-width: $mobile-breakpoint) {
+          right: calc(10% - 10px);
+          border-width: 10px 0 10px 10px;
+          border-color: transparent transparent transparent $resume-content-color;
+        }
       }
   
       &--right::before {
         left: 30px;
         border-width: 10px 10px 10px 0;
         border-color: transparent $resume-content-color transparent transparent;
+
+        @media(max-width: $mobile-breakpoint) {
+          left: 90%;      
+          border-width: 10px 0 10px 10px;
+          border-color: transparent transparent transparent $resume-content-color;
+        }
       }
   }
 
@@ -88,7 +126,7 @@
     position: relative;
     border-radius: 2px;
     color: #C49B66;
-    
+
     p {
       color: black;
       font-weight: 500;
@@ -105,7 +143,12 @@
   }
 
   &:hover &__container--right::before {
-    border-color: transparent lighten($resume-content-color, 5%) transparent transparent;
+    border-color: transparent lighten($resume-content-color, 0%) transparent transparent;
+
+    @media(max-width: $mobile-breakpoint) {
+      border-color: transparent transparent transparent lighten($resume-content-color, 5%);
+    }
+    
   }
 
   // &:hover::before {

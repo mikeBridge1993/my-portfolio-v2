@@ -14,12 +14,12 @@ const frontEndInfo = {
 
 const frontEndProjects = [
   { 
-    thumbnail: frontEndProject1,
+    thumbnail: frontEndProject2,
     visitLink:'https://www.miguelbettencourt.com/',
     gitLink:'https://github.com/mikeBridge1993/miguel-bettencourt-portfolio',
   },
   { 
-    thumbnail: frontEndProject2,
+    thumbnail: frontEndProject1,
     visitLink:'https://adoring-thompson-c19931.netlify.com/',
     gitLink:'https://github.com/mikeBridge1993/advanced-css-course-natours',
   },
@@ -65,7 +65,7 @@ const SectionProjects = () => (
             <div className="gallery gallery--projects">
               <div className="gallery__card">
                 <h3 className="gallery__card__header">{el.info.title}</h3>
-                <p className="gallery__card__text text-left">{el.info.text}</p>
+                <p className="gallery__card__text">{el.info.text}</p>
               </div>
             </div>
             <div className="projects-box__header mt-auto">Technologies Learned</div>

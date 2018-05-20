@@ -7,6 +7,11 @@ $resume-content-color: #E0DEDF;
 
 //Heights
 $header-height: 3rem;
+$section-height: calc(100vh - #{$header-height});
 
 //Padding
 $sections-padding: 5rem;
+
+//Breakpoints
+$mobile-breakpoint: 767px;
+$tablet-breakpoint: 1200px;
