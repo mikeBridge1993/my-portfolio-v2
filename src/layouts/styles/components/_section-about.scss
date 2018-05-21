@@ -25,13 +25,14 @@
     height: 100%;
     opacity: 0;
     position: relative;
-    background-image: url(http://res.cloudinary.com/duwpl9hjf/image/upload/v1526914382/myportfolio/presentation.jpg);
-    filter: grayscale(100%);
+    background-image: url(http://res.cloudinary.com/duwpl9hjf/image/upload/e_grayscale/v1526914382/myportfolio/presentation.jpg);
+    box-sizing: content-box;
     background-size: cover;
     background-position: left;
     z-index: 10;
     animation: moveInLeft 1s  ease-out forwards;
     overflow: hidden;
+    border-right: solid 1px #C49B66;
 
     @media(max-width: $tablet-breakpoint) {
       background-position: center;
@@ -43,21 +44,21 @@
     }
   }
 
-  &__border {
-    position: absolute;
-    width: 45%;
-    height: 100%;
-    border-right: solid 1px #C49B66;
-    box-sizing: content-box;
-    z-index: -1;
-    opacity: 0;    
-    animation: moveInLeft 1s  ease-out forwards;
+  // &__border {
+  //   position: absolute;
+  //   width: 45%;
+  //   height: 100%;
+  //   border-right: solid 1px #C49B66;
+  //   box-sizing: content-box;
+  //   z-index: -1;
+  //   opacity: 0;    
+  //   animation: moveInLeft 1s  ease-out forwards;
 
-    @media(max-width: $mobile-breakpoint) {
-      width: 35%;
-      max-height: $section-height;
-    }
-  }
+  //   @media(max-width: $mobile-breakpoint) {
+  //     width: 35%;
+  //     max-height: $section-height;
+  //   }
+  // }
 
   &__information {
     flex-basis: 55%;

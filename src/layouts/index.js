@@ -15,7 +15,7 @@ const TemplateWrapper = ({ children }) => (
         {
           rel: 'shortcut icon',
           type: 'image/png',
-          href: 'https://res.cloudinary.com/duwpl9hjf/image/upload/v1525775077/myportfolio/favicon/favicon.png',
+          href: 'https://res.cloudinary.com/duwpl9hjf/image/upload/v1526922109/myportfolio/favicon.png',
         },
       ]}
       script={[

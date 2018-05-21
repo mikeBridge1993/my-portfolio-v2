@@ -21,7 +21,6 @@ const SectionAbout = () => (
   <section className="section-about" id="section-about">
     <div className="about-box">
       <div className="about-box__image" />
-      <div className="about-box__border" />
       <div className="about-box__information">
         <div className="gallery gallery--about">
           {cardsInfo.map(el => (

@@ -1,9 +1,6 @@
 import React from 'react';
-import frontEndProject1 from '../img/projects/natours-project.png';
-import frontEndProject2 from '../img/projects/miguelbettencourt-project.png';
-import backEndProject1 from '../img/projects/xpensify-project.png';
 
-const frontEndIcons = [['fab fa-html5', '#F16524'], ['fab fa-css3-alt', '#27A3E1'], ['fab fa-js', '#FDDE35'], ['fab fa-react', '#61DAFB'], ['fab fa-sass', '#CF649A'], ['devicon-bootstrap-plain', 'purple']];
+const frontEndIcons = ['fab fa-html5', 'fab fa-css3-alt', 'fab fa-js', 'fab fa-react', 'fab fa-sass', 'devicon-bootstrap-plain'];
 
 const frontEndInfo = {
   title: 'Front End Development',
@@ -14,19 +11,18 @@ const frontEndInfo = {
 
 const frontEndProjects = [
   { 
-    thumbnail: frontEndProject2,
+    thumbnail: 'https://res.cloudinary.com/duwpl9hjf/image/upload/v1526922970/myportfolio/miguelbettencourt-project.3d1f9c58.png',
     visitLink: 'https://www.miguelbettencourt.com/',
     gitLink: 'https://github.com/mikeBridge1993/miguel-bettencourt-portfolio',
   },
   { 
-    thumbnail: frontEndProject1,
+    thumbnail: 'https://res.cloudinary.com/duwpl9hjf/image/upload/v1526922977/myportfolio/natours-project.fcf70620.png',
     visitLink: 'https://adoring-thompson-c19931.netlify.com/',
     gitLink: 'https://github.com/mikeBridge1993/advanced-css-course-natours',
   },
 ];
 
-const backEndIcons = [['fab fa-node', '#90C53F'], ['devicon-express-original', 'white'], ['devicon-mongodb-plain', 'green']];
-
+const backEndIcons = ['fab fa-node', 'devicon-express-original', 'devicon-mongodb-plain'];
 
 const backEndInfo = {
   title: 'Back End Development',
@@ -37,7 +33,7 @@ const backEndInfo = {
 
 const backEndProjects = [
   { 
-    thumbnail: backEndProject1,
+    thumbnail: "https://res.cloudinary.com/duwpl9hjf/image/upload/v1526923120/myportfolio/xpensify-project.90fc4755.png",
     visitLink: 'https://vast-atoll-44629.herokuapp.com/',
     gitLink: 'https://github.com/mikeBridge1993/react-course-expensify-app',
   },
@@ -71,11 +67,11 @@ const SectionProjects = () => (
             <div className="projects-box__header mt-auto">Technologies Learned</div>
             <div className="projects-box__skills">
               {el.icons.map((ele, i) => {
-              return (
-                <div className="skill__card">
-                  <i className={ele[0]} />
-                </div>);
-            })}
+                return (
+                  <div className="skill__card">
+                    <i className={ele} />
+                  </div>);
+              })}
             </div>
             <div className="projects-box__header">Projects Developed</div>
             <div className="projects-box__reel">
