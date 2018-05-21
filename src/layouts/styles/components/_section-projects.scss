@@ -186,7 +186,6 @@
       @media not (hover: none) {
         opacity: 1;
       }
-
     }
   }
 
@@ -196,12 +195,10 @@
     font-family: $default-text-font;
     font-size: 1.5rem;
     background-color: rgba(212, 202, 202, 0.4);
-    background-color: rgba(212, 202, 202, 0.4);
     color: black;
     font-weight: 500;
     opacity: 0;
     animation: opacity 1s .8s forwards; 
-    
   }
 
   &__skills + &__header {

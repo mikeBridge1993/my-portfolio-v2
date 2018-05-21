@@ -1,27 +1,25 @@
 import React from 'react';
 
 let timelineInfo = [
-  {year: 'Sep 2011 - Jul 2014', text: 'Bachelor’s Degree in Aerospace Engineering, in Lisbon (Instituto Superior Técnico).'},
-  {year: 'Sep 2014 - Aug 2015', text: "Started Master's Degree in Aerospace Engineering, in Munich (Technische Universität München)."},
-  {year: 'Aug 2015 - Nov 2016', text: "Finished Master's Degree in Aerospace Engineering, in Lisbon (Instituto Superior Técnico)."},
-  {year: 'Jul 2016 - Dec 2017', text: 'Worked as Continuous Airworthiness Assistant, in Lisbon (Lease Fly Aviation Services) and started studying web development on my spare time.'},
-  {year: 'Jan 2018 - in progress', text: 'Devoted full time to learn web development.'}
+  { year: 'Sep 2011 - Jul 2014', text: 'Bachelor’s Degree in Aerospace Engineering, in Lisbon (Instituto Superior Técnico).' },
+  { year: 'Sep 2014 - Aug 2015', text: "Started Master's Degree in Aerospace Engineering, in Munich (Technische Universität München)." },
+  { year: 'Aug 2015 - Nov 2016', text: "Finished Master's Degree in Aerospace Engineering, in Lisbon (Instituto Superior Técnico)." },
+  { year: 'Jul 2016 - Dec 2017', text: 'Worked as Continuous Airworthiness Assistant, in Lisbon (Lease Fly Aviation Services) and started studying web development on my spare time.' },
+  { year: 'Jan 2018 - in progress', text: 'Devoted full time to learn web development.' },
 ];
 
 timelineInfo = timelineInfo.reverse();
 
-const SectionResume= () => (
-  <section className='section-resume'>
+const SectionResume = () => (
+  <section className="section-resume">
     <div className="mt-5 pt-4">
       {timelineInfo.map((el, i) => {
         let type = '';
-
         if (i % 2 === 0) {
           type = 'timeline__container timeline__container--left';
         } else {
-          type = 'timeline__container timeline__container--right'
+          type = 'timeline__container timeline__container--right';
         }
-
         return (
           <div className="timeline">
             <div className={type}>

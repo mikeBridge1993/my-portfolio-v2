@@ -19,126 +19,77 @@
     }
     
     h1 {
-      font-size: 21px;
-      font-weight: 500;
+      font-weight: 400;
+      letter-spacing: 0px;
+      color: #C49B66;
+      animation: moveInTop 2s ease-out forwards;
+      line-height: 6rem;
+      font-size: 9.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+      
 
-      &:nth-child(1) {
-        font-weight: 400;
-        letter-spacing: 0px;
-        color: #C49B66;
-        animation: moveInTop 2s ease-out forwards;
-        line-height: 6rem;
-        font-size: 9.5rem;
-        margin-bottom: 1.5rem;
-        font-weight: 400;
-        
-
-        @media(max-width: $mobile-breakpoint) {
-          font-size: 6.2rem;
-          font-weight: 500;
-        }
-
-        //Ipad Portrait
-        @media only screen 
-        and (min-device-width : 768px) 
-        and (max-device-width : 1024px) 
-        and (orientation : portrait) {
-          font-size: 10rem;
-          font-weight: 500;
-          margin-top: 1rem;
-        }
-
-        //Ipad Pro
-        @media only screen 
-        and (min-device-width: 1024px) 
-        and (max-device-width: 1366px) 
-        and (orientation: portrait) 
-        and (-webkit-min-device-pixel-ratio: 1.5) {
-          font-size: 17rem;
-          font-weight: 500;
-          margin-top: 5rem;
-        }
+      @media(max-width: $mobile-breakpoint) {
+        font-size: 6.2rem;
+        font-weight: 500;
       }
 
-      &:nth-child(2) {
-        visibility: hidden;
-        animation: moveInBottom 2s 1s ease-out forwards;
+      //Ipad Portrait
+      @media only screen 
+      and (min-device-width : 768px) 
+      and (max-device-width : 1024px) 
+      and (orientation : portrait) {
+        font-size: 10rem;
+        font-weight: 500;
+        margin-top: 1rem;
+      }
 
-        @media(max-width: $mobile-breakpoint) {
-          font-size: 1.5rem;
-        }
-
-        //Ipad Portrait
-        @media only screen 
-        and (min-device-width : 768px) 
-        and (max-device-width : 1023px) 
-        and (orientation : portrait) {
-          font-size: 2.5rem;
-          font-weight: 400;
-          line-height: 7rem;
-        }
-
-        //Ipad Pro
-        @media only screen 
-        and (min-device-width: 1024px) 
-        and (max-device-width: 1366px) 
-        and (orientation: portrait) 
-        and (-webkit-min-device-pixel-ratio: 1.5) {
-          font-size: 4rem;
-          font-weight: 400;
-          line-height: 15rem;
-        }
+      //Ipad Pro
+      @media only screen 
+      and (min-device-width: 1024px) 
+      and (max-device-width: 1366px) 
+      and (orientation: portrait) 
+      and (-webkit-min-device-pixel-ratio: 1.5) {
+        font-size: 17rem;
+        font-weight: 500;
+        margin-top: 5rem;
       }
     }
 
+    h2 {
+      visibility: hidden;
+      animation: moveInBottom 2s 1s ease-out forwards;
+
+      @media(max-width: $mobile-breakpoint) {
+        font-size: 1.5rem;
+      }
+
+      //Ipad Portrait
+      @media only screen 
+      and (min-device-width : 768px) 
+      and (max-device-width : 1023px) 
+      and (orientation : portrait) {
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 7rem;
+      }
+
+      //Ipad Pro
+      @media only screen 
+      and (min-device-width: 1024px) 
+      and (max-device-width: 1366px) 
+      and (orientation: portrait) 
+      and (-webkit-min-device-pixel-ratio: 1.5) {
+        font-size: 4rem;
+        font-weight: 400;
+        line-height: 15rem;
+      }
+    }
+  
     @media(max-width: $tablet-breakpoint) {
       width: 100%;
     }
   }
-
-  &__scroll {
-    position: absolute;
-    height: auto;
-    width: auto;
-    bottom: 8%;
-    left: 50%;
-    visibility: hidden;
-    text-align: center;
-    animation: moveInChevron 1s 3.5s ease-out forwards;
-
-    .chevron {
-      width: 40px;
-      height: 40px;
-      border-left: 2px solid #fff;
-      border-bottom: 2px solid #fff;
-      transition: all 1s;
-      transform: rotateZ(-45deg);
-
-      &:hover {
-        transform: translateY(-1rem)  rotateZ(-45deg);
-        cursor: pointer;
-      }
-    }
-  }
 }
 
-
-
-@keyframes floating {
-  from {
-    -webkit-transform: translate(-50%, -50%) rotateY(-12deg) rotateZ(0deg);
-            transform: translate(-50%, -50%) rotateY(-12deg) rotateZ(0deg);
-    text-shadow: 10px 10px 3px rgba(0,0,0,0.15);
-  }
-  65% {
-    -webkit-transform: translate(-50%, -50%) rotateY(10deg) rotateX(10deg) rotateZ(2deg);
-            transform: translate(-50%, -50%) rotateY(10deg) rotateX(10deg) rotateZ(2deg);
-    text-shadow: -10px -10px 3px rgba(0,0,0,0.15);
-  }
-  to {
-    -webkit-transform: translate(-50%, -50%) rotateY(-12deg) rotateZ(0deg);
-            transform: translate(-50%, -50%) rotateY(-12deg) rotateZ(0deg);
-    text-shadow: 10px 10px 3px rgba(0,0,0,0.15);
-  }
-}
 

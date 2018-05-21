@@ -2,14 +2,11 @@
   position: relative;
   height: $section-height;
   width: 100%;
-  background-image:   linear-gradient(rgba(black, .3), rgba(black, .3)), url(https://scontent.flis5-1.fna.fbcdn.net/v/t1.15752-9/32924730_1990702857859199_203575239307689984_n.jpg?_nc_cat=0&oh=5ec6549d98a4b606b564be1d629c950c&oe=5B9CA520);
+  background-image:   linear-gradient(rgba(black, .3), rgba(black, .3)), url(https://res.cloudinary.com/duwpl9hjf/image/upload/v1526914524/hero.jpg);
   background-size: cover;
   background-position: left;
 
   @media(max-width: $mobile-breakpoint) {
-    background-image:  linear-gradient(rgba(black, .3), rgba(black, .3)), url(https://scontent.flis5-1.fna.fbcdn.net/v/t1.15752-9/32924730_1990702857859199_203575239307689984_n.jpg?_nc_cat=0&oh=5ec6549d98a4b606b564be1d629c950c&oe=5B9CA520);
-    @media(max-width: $mobile-breakpoint) {
-      max-height: calc(#{$section-height} - 1rem);
-    }
+    max-height: calc(#{$section-height} - 1rem);
   }
 }

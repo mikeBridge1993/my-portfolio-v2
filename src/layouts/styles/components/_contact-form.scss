@@ -53,9 +53,6 @@
     padding: .3rem 1.2rem;
     border-radius: 1px;
     border: none;
-    // background-color: rgba(#C49B66, .5);
-    background-color: lightgrey;
-    background-color: rgba(#C49B66, .2);
     background-color: rgba(#A8A4A4, .2);
     border: 1px solid black;
     display: block;
@@ -66,11 +63,9 @@
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba(black, 0.2);
-      // border-bottom: 1px solid rgb(23, 161, 23);
       background-color: rgba(23, 161, 23, .3);
 
       &:invalid {
-        // border-bottom: 1px solid rgb(245, 161, 6);
         background-color: rgba(#C49B66, .5);
       }
     }

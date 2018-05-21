@@ -7,5 +7,4 @@ const ResumePage = () => (
   </div>
 );
 
-
 export default ResumePage;

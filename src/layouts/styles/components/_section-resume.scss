@@ -6,7 +6,7 @@
   background-color: #6E6E6E;
 
   @media(max-width: $tablet-breakpoint) {
-    min-height: calc(#{$section-height} - 1rem);
+    min-height: $section-height;
     height: auto;
   }
 

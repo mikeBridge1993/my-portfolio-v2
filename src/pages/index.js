@@ -5,6 +5,6 @@ const IndexPage = () => (
   <div>
     <SectionHero />
   </div>
-)
+);
 
 export default IndexPage;

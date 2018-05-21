@@ -1,7 +1,7 @@
 
 .skill {
   &__card {
-    flex-basis: calc(16.666666667%);
+    flex-basis: 16.667%;
     height: 10rem;
     line-height: 0;
     position: relative;
@@ -41,7 +41,6 @@
       transition: all .8s;
       background-color: rgba(0,0,0,.2);
       opacity: 0;
-      // border-radius: 2px;
     }
 
     &:hover::after {
@@ -53,15 +52,5 @@
       transition: all .6s;
       opacity: 0;
     }
-
-    .icon-bootstrap {
-      font-size: 4rem;
-      line-height: 1.3;
-    }
-    
-    // &__icon:hover {
-    //   transform: rotateX(20deg) rotateZ(10deg);  
-    //   transform-origin: center;
-    //  }
   }
 }
