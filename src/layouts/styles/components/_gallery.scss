@@ -65,8 +65,6 @@
       letter-spacing: 0px;
     }
 
-
-
     @media(max-width: $mobile-breakpoint) {
       p {
         font-size: 1.4rem;
@@ -81,6 +79,7 @@
   }
 
   &--projects {
+
     p {
       min-height: 12rem;
     }
@@ -93,6 +92,14 @@
       p {
         min-height: 0;
       }
+    }
+
+    //Ipad Portrait
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (orientation : portrait) {
+      padding: 8rem 0 4rem 0;
     }
   }
 }

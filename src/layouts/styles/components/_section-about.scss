@@ -19,6 +19,7 @@
   position: relative;
   perspective: 1000px;
   overflow: hidden;
+
   &__image {
     flex-basis: 45%;
     height: 100%;
@@ -33,15 +34,13 @@
     animation: moveInLeft 1s  ease-out forwards;
     overflow: hidden;
 
+    @media(max-width: $tablet-breakpoint) {
+      background-position: center;
+    }
+
     @media(max-width: $mobile-breakpoint) {
-      // display: none;
       flex-basis: 35%;
-      background-image: url(https://scontent.flis5-1.fna.fbcdn.net/v/t1.15752-9/32982606_1991633077766177_4253786458076217344_n.jpg?_nc_cat=0&oh=c4006087b87d17106b216cfb67193222&oe=5B89CFE7);
-      background-position: right;
       max-height: $section-height;
-      
-      
-      
     }
   }
 

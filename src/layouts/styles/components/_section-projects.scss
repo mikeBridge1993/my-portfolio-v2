@@ -8,6 +8,23 @@
   @media(max-width: $mobile-breakpoint) {
     height: auto;
   }
+  
+   //Ipad Portrait
+   @media only screen 
+   and (min-device-width : 768px) 
+   and (max-device-width : 1024px) 
+   and (orientation : portrait) {
+     height: auto;
+   }
+
+   //Ipad Pro
+  @media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    height: auto;
+  }
 }
 
 .projects-box {
@@ -23,6 +40,24 @@
     flex-direction: column;
   }
 
+  //Ipad Pro
+  @media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    flex-direction: column;
+  }
+
+  //Ipad Portrait
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) 
+  and (orientation : portrait) {
+    flex-direction: column;
+    padding: 0;
+  }
+
   &__frontend, &__backend {
     flex-basis: 50%;
     height: 100%;
@@ -31,11 +66,15 @@
     flex-direction: column;
     justify-content: flex-start;
 
-    @media(max-width: $tablet-breakpoint) {
-      padding: 8rem 0 0 0;
+    @media(max-width: $mobile-breakpoint) {
+      padding: 0;
     }
 
-    @media(max-width: $mobile-breakpoint) {
+    //Ipad Portrait
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (orientation : portrait) {
       padding: 0;
     }
   }
@@ -46,15 +85,12 @@
     color: black;
 
     @media(max-width: $mobile-breakpoint) {
-      flex-direction: column;
       border: none;
     }
   }
 
   &__backend {
-    background-color: rgb(139, 139, 139);
-    background-color: rgba(black, .57);
-    
+    background-color: rgba(black, .57); 
   }
 
   &__skills {
@@ -135,6 +171,14 @@
         text-decoration: none;
       }
 
+      //Ipad Portrait
+      @media only screen 
+      and (min-device-width : 768px) 
+      and (max-device-width : 1024px) 
+      and (orientation : portrait) {
+        width: 25%;
+      }
+
       @media(max-width: $mobile-breakpoint) {
         width: 25%;
       }
@@ -142,9 +186,8 @@
       @media not (hover: none) {
         opacity: 1;
       }
-      
+
     }
-   
   }
 
   &__header {
@@ -157,7 +200,8 @@
     color: black;
     font-weight: 500;
     opacity: 0;
-    animation: opacity 1s .8s forwards;    
+    animation: opacity 1s .8s forwards; 
+    
   }
 
   &__skills + &__header {

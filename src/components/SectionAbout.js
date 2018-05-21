@@ -47,13 +47,3 @@ const SectionAbout = () => (
 );
 
 export default SectionAbout;
-
-// {el.title=="Dear visitor," && <button onClick={() => {document.getElementById('interests-text').classList.toggle("gallery__card--active"), document.getElementById('background-text').classList.toggle("gallery__card--active")}} className="button btn-text mt-4">Show more <i className="far fa-hand-point-right"></i></button>}
-
-// <div className='mt-5'>
-//             <div className='paragraph'>
-//                 <p className='paragraph__text'>Dear Visitor, welcome to my personal page. <br /><br /> My name is Miguel Ponte and I am an Aerospace Engineer, who recently found a passion for web development.  <br /> After working in the aeronautical field, I'm now eager to pursue my first job on the web industry, aspiring to become a Full Stack Web Developer. <br /><br />
-//                 On a more personal side, I was born in the Azores archipelago, Portugal. <br /> One of my core beliefs is that with hardwork and discipline everyone can achieve almost everything that they set their mind to. <br/>On my free time, I enjoy taking care of my mind and body through sports, reading, meditation, listening to music and to podcasts.
-//                 </p>
-//             </div>
-//         </div>

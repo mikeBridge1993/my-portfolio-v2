@@ -8,6 +8,19 @@
     width: 85%;
   }
 
+  @media(max-width: $tablet-breakpoint) {
+    width: 85%;
+  }
+
+  //Ipad Pro
+  @media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    width: 85%;
+  }
+
   &__header {
     font-size: 1.6rem;
     font-weight: 600;
